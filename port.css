@@ -146,21 +146,33 @@ header :checked ~ .menuicon .line:nth-child(3){
 header :checked ~ .menuicon .line:nth-child(2){
     opacity: 0;
 }
-}
 .content{
     display: flex;
-    background-color: wheat;
-    width: 100%;
-    height: 500px;
-    padding-top: 80px;
-    display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 40px;
+    padding: 120px 8% 60px;
+    background-color: wheat;
+    min-height: 100vh;
 }
-@media screen and (max-width: 768px) {
-    .content {
-        flex-direction: column; /* Stack the children vertically */
-        padding-top: 20px; /* Adjust padding as needed */
-        align-items: center; /* Center-align the items for a better mobile view */
+
+.text{
+    flex: 1;
+}
+
+@media (max-width:768px){
+
+    .content{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 100px 20px 40px;
+        min-height: auto;
+    }
+
+    .text{
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 }
 /* about css starts */
