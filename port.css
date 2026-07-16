@@ -174,25 +174,59 @@ header :checked ~ .menuicon .line:nth-child(2){
 }
 /* about css ends */
 /* propic css start */
+/* Profile Picture */
 .propic{
-    width: 25%;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0;
+    border: 8px solid transparent;
+    transition: all 0.3s ease;
 }
+
 .propic img{
     width: 100%;
-    height: 148%;
-    transition: 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
     cursor: pointer;
+}
+
+.propic:hover{
+    border-color: #fff;
 }
 
 .propic img:hover{
     content: url(image/Img-2.jpg);
-    transform: scale(1.2,1.2);
+    transform: scale(1.1);
 }
-.propic:hover{
-    border: 8px solid white;
+
+/* Tablet */
+@media (max-width: 992px){
+    .propic{
+        width: 280px;
+        height: 280px;
+        margin-top: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+    .propic{
+        width: 220px;
+        height: 220px;
+        margin: 20px auto;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+    .propic{
+        width: 180px;
+        height: 180px;
+    }
+}
 }
 @media screen and (max-width: 768px){
     .propic{
