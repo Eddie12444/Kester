@@ -179,6 +179,7 @@ header{
 .propic img:hover{
     transform:scale(1.08);
     border-color:orange;
+    background-image: url( "image/Img-2.jpg");
 }
 
 /* ==========================
